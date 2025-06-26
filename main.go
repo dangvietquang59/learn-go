@@ -1,6 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 
-	CalculateSQRT(9)
+	fmt.Println(
+		LCM(12, 18))
+
 }

@@ -8,7 +8,38 @@ import (
 	"time"
 )
 
-func CalculateSQRT(num int) {
+func LCM(a, b int) int {
+	if a == 0 || b == 0 {
+		return 0 // định nghĩa: nếu 1 số = 0, lcm = 0
+	}
+	return abs(a*b) / FindUCLN(a, b)
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+func FindUCLN(a, b int) int {
+	for b != 0 {
+		a, b = b, a%b
+	}
+	return a
+}
+
+func ConvertHHMM(hours, minutes int) {
+	fmt.Printf("%.02d:%02d", hours, minutes)
+}
+func ConvertUSDtoVND(num int) int {
+	return num * 25000
+}
+func ConvertCMtoINCH(num float64) float64 {
+	result := num / 2.54
+
+	return result
+}
+func CalculateSQRT(num float64) {
 	if num < 0 {
 		return
 	}
