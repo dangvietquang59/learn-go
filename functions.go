@@ -8,9 +8,16 @@ import (
 	"time"
 )
 
+func CalculateTotal(slice []int) int {
+	total := 0
+	for _, v := range slice {
+		total += v
+	}
+	return total
+}
 func LCM(a, b int) int {
 	if a == 0 || b == 0 {
-		return 0 // định nghĩa: nếu 1 số = 0, lcm = 0
+		return 0
 	}
 	return abs(a*b) / FindUCLN(a, b)
 }
